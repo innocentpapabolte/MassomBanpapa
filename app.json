@@ -1,0 +1,49 @@
+{
+    "name": "lovegury Ban All",
+    "description": "A Telegram Bot For Telegram ...",
+    "logo": "https://te.legra.ph/file/dfdac73bbf3b7fe0dff96.jpg",
+    "keywords": [
+        "banall",
+        "telegram bot",
+        "pyrogram"
+    ],
+    "repository": "https://github.com/KhuniVillan/KhuniBanAll",
+    "env": {
+        "API_ID": {
+            "description": "Your Api ID",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your Api Hash",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your Bot Token",
+            "required": true
+        },
+        "SUDO": {
+            "description": "Telegram id of the person who will known as owner of the bot.",
+            "required": true
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "12"
+            }
+        }
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    },
+    "stack": "container"
+    }
